@@ -1,0 +1,374 @@
+@font-face {
+  font-family: big;
+  src: url(Fonts/Freight_Big_Pro/Freight_Big_Pro/Freight\ Big\ Pro\ Medium.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: big;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #f5e41b;
+}
+
+#loader {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #f5e41b;
+  z-index: 105;
+}
+
+#loader2 {
+  top: 0;
+  position: absolute;
+}
+
+#loader2 > video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85vw 4vw;
+  z-index: 99;
+  position: relative;
+}
+
+#nav svg path {
+  fill: #fff;
+}
+
+.n-right {
+  width: 28vw;
+  height: 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: ease-in-out;
+  transition-duration: 0.7s;
+  transition-timing-function: linear;
+  z-index: 99;
+  position: relative;
+}
+
+.n-right > a {
+  text-decoration: none;
+  font-size: 1.25vw;
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: 400;
+  z-index: 99;
+  position: relative;
+}
+
+.n-right > i {
+  font-size: 1.5vw;
+  z-index: 99;
+  position: relative;
+  color: #fff;
+}
+
+.n-right > i:hover {
+  cursor: pointer;
+}
+
+.hero-text {
+  font-size: 5.8vw;
+  font-weight: 100;
+  text-align: center;
+  font-family: freight big pro;
+  line-height: 0.9;
+  letter-spacing: -1px;
+  margin-top: 6vw;
+  z-index: 99;
+  position: relative;
+  color: #fff;
+}
+
+.btm {
+  width: 100%;
+  height: 5vw;
+  position: absolute;
+  bottom: 0%;
+  padding: 0vw 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btm > a {
+  font-size: 1.25vw;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btm > i {
+  font-size: 2.5vw;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  padding: 6vw 0vw;
+}
+
+.elem {
+  position: relative;
+  padding: 0.5vw 0vw;
+  width: 100%;
+  display: flex;
+}
+
+.elem > .textBackground {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  display: none;
+  background: linear-gradient(to right, #f5e31bf0, #f5e41b, #f5e31bf6);
+  box-shadow: 10px 0px 10px #f5e41b;
+}
+
+.elem:hover .textBackground {
+  display: block;
+}
+
+.elem::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  transform: scaleY(0);
+}
+
+.elem:hover::after {
+  top: 0;
+  background-color: #f5e41b;
+  transition: ease-in-out;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transform: scaleY(1);
+}
+
+.elem:hover h2 {
+  font-style: oblique;
+  transition-duration: 0.3s;
+  color: #000;
+  cursor: pointer;
+}
+
+.elem > h2 {
+  font-size: 7.5vw;
+  font-weight: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  color: #fff;
+}
+
+.elem > .movingIn {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: movingText;
+  animation-duration: 7.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 89;
+}
+
+.movingIn > h5 {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.25vw;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #000;
+  margin-left: 1vw;
+}
+
+@keyframes movingText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#page3 {
+  height: 920vh;
+  width: 100%;
+  position: relative;
+  padding: 2vw 2vw;
+  display: flex;
+ }
+
+.box-a,
+.box-b,
+.box-c {
+  width: 33.5%;
+  height: 100%;
+  position: relative;
+  padding: 1vw 1vw;
+}
+
+.imgBox {
+  width: 100%;
+  height: 645px;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  border-radius: 13px;
+  margin-bottom: 30px;
+}
+
+.imgBox-2 {
+  width: 100%;
+  height: 345px;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  border-radius: 13px;
+  margin-bottom: 30px;
+}
+
+.imgBox-3 {
+  width: 100%;
+  height: 500px;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  border-radius: 13px;
+  margin-bottom: 30px;
+}
+
+.imgBox:hover img,
+.imgBox-2:hover img,
+.imgBox-3:hover img {
+  scale: 1.075;
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+.imgBox > img,
+.imgBox-2 > img,
+.imgBox-3 > img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 9;
+}
+
+.imgBox > h1,
+.imgBox-2 > h1,
+.imgBox-3 > h1 {
+  color: white;
+  position: relative;
+  font-size: 3vw;
+  font-weight: 100;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.end{
+  position: absolute;
+  z-index: 99;
+  bottom: 0.5%;
+  left: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3vw;
+  cursor: pointer;
+}
+
+.end>i{
+  font-size: 1.5vw;
+}
+
+.end>h2{
+  font-size: 1.7vw;
+  font-family: big;
+  font-weight: 400;
+}
+
+#page4{
+  height: 18vh;
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vw 4.5vw;
+}
+
+#page4>h2{
+  font-size: 1.5vw;
+  font-family: big;
+  letter-spacing: 1px;
+  font-style: 300;
+  cursor: pointer;
+}
+
+.right{
+  display: flex;
+  gap: 4.5vw;
+}
+
+.right>h2{
+  font-size: 1vw;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-style: 100;
+  cursor: pointer;
+}
